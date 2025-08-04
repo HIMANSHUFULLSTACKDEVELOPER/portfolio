@@ -343,7 +343,7 @@
         }
 
         .profile-avatar {
-            width: 300px;
+            width: 250px;
             height: 330px;
             border-radius: 50%;
             background: linear-gradient(135deg, #fca311, #5e60ce);
@@ -650,6 +650,10 @@
 
             .contact-info {
                 display: none;
+            }
+            .hero {
+                padding: 100px 0 60px;
+                height: 100vh;
             }
 
             .hero h1 {
