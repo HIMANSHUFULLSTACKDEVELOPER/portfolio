@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Match Selector</title>
+    <!-- link -->
+    <link rel="stylesheet" href="match.css">
+    <script src="match.js"></script>
+
+</head>
+<body>
+    <!-- display -->
+    <div class="display">
+        <img src="https://upload.wikimedia.org/wikipedia/en/8/84/Indian_Premier_League_Official_Logo.svg" id="team-logo" alt="IPL Logo">
+        <h1 id="match-display">Select a team to see the match</h1>
+    </div>
+<!-- team -->
+    <div class="box-container">
+        <div id="mi-box" class="box" onclick="selectTeam('MI')">
+            <h2>MI</h2>
+        </div>
+        <div id="rcb-box" class="box" onclick="selectTeam('RCB')">
+            <h2>RCB</h2>
+        </div>
+        <div id="csk-box" class="box" onclick="selectTeam('CSK')">
+            <h2>CSK</h2>
+        </div>
+        <div id="kkr-box" class="box" onclick="selectTeam('KKR')">
+            <h2>KKR</h2>
+        </div>
+    </div>
+
+</body>
+</html>

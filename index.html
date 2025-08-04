@@ -1,614 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Himanshu Patil - Full Stack Developer</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <link rel="stylesheet" href="./assets/index.css">
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #ffffff;
-        }
-
-        /* Header */
-        header {
-            background: #0b0c2a;
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(11, 12, 42, 0.3);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #fca311;
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-            font-weight: 500;
-        }
-
-        .nav-links a:hover {
-            color: #fca311;
-        }
-
-        .contact-info {
-            display: flex;
-            gap: 1rem;
-            font-size: 0.9rem;
-        }
-
-        .contact-info span {
-            color: #fca311;
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #0b0c2a 0%, #1a1b4a 100%);
-            color: white;
-            padding: 120px 0 80px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="1" fill="%23fca311" opacity="0.3"><animate attributeName="opacity" values="0.3;1;0.3" dur="3s" repeatCount="indefinite"/></circle><circle cx="80" cy="30" r="1.5" fill="%235e60ce" opacity="0.4"><animate attributeName="opacity" values="0.4;1;0.4" dur="2s" repeatCount="indefinite"/></circle><circle cx="60" cy="70" r="1" fill="%233b82f6" opacity="0.3"><animate attributeName="opacity" values="0.3;1;0.3" dur="4s" repeatCount="indefinite"/></circle></svg>');
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(45deg, #fca311, #5e60ce);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8rem;
-            color: #fca311;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-
-        .hero-stats {
-            display: flex;
-            justify-content: center;
-            gap: 3rem;
-            margin-bottom: 2rem;
-            flex-wrap: wrap;
-        }
-
-        .stat {
-            text-align: center;
-        }
-
-        .stat-number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #fca311;
-            display: block;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-            opacity: 0.8;
-        }
-
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        .social-link {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            background: rgba(252, 163, 17, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #fca311;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: 2px solid rgba(252, 163, 17, 0.3);
-        }
-
-        .social-link:hover {
-            background: #fca311;
-            color: #0b0c2a;
-            transform: translateY(-3px);
-        }
-
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: #ffffff;
-            position: relative;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #0b0c2a;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -10px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: linear-gradient(45deg, #fca311, #5e60ce);
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 2fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .about-image {
-            text-align: center;
-        }
-
-        .profile-card {
-            background: linear-gradient(135deg, #fca311, #5e60ce);
-            padding: 3px;
-            border-radius: 20px;
-            display: inline-block;
-        }
-
-        .profile-inner {
-            background: white;
-            padding: 2rem;
-            border-radius: 18px;
-            text-align: center;
-        }
-
-        .profile-avatar {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #fca311, #5e60ce);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-            font-size: 4rem;
-            color: white;
-        }
-
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-            margin-bottom: 2rem;
-        }
-
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .skill-item {
-            background: linear-gradient(135deg, rgba(252, 163, 17, 0.1), rgba(94, 96, 206, 0.1));
-            padding: 1.5rem;
-            border-radius: 15px;
-            text-align: center;
-            border: 1px solid rgba(252, 163, 17, 0.2);
-            transition: all 0.3s ease;
-        }
-
-        .skill-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(252, 163, 17, 0.2);
-        }
-
-        .skill-icon {
-            font-size: 2.5rem;
-            color: #fca311;
-            margin-bottom: 1rem;
-        }
-
-        .skill-item h3 {
-            color: #0b0c2a;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .service-card {
-            background: white;
-            padding: 2.5rem;
-            border-radius: 20px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border-top: 4px solid #fca311;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #fca311, #5e60ce);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
-            color: white;
-        }
-
-        .service-card h3 {
-            color: #0b0c2a;
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .service-features {
-            list-style: none;
-            margin-top: 1rem;
-        }
-
-        .service-features li {
-            padding: 0.5rem 0;
-            color: #555;
-            position: relative;
-            padding-left: 1.5rem;
-        }
-
-        .service-features li::before {
-            content: '✓';
-            position: absolute;
-            left: 0;
-            color: #5e60ce;
-            font-weight: bold;
-        }
-
-        /* Projects Section */
-        .projects {
-            padding: 80px 0;
-            background: #ffffff;
-        }
-
-        .project-filters {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 3rem;
-            flex-wrap: wrap;
-        }
-
-        .filter-btn {
-            padding: 0.8rem 2rem;
-            border: 2px solid #fca311;
-            background: transparent;
-            color: #fca311;
-            border-radius: 25px;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            font-weight: 500;
-        }
-
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #fca311;
-            color: white;
-        }
-
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .project-card {
-            background: white;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
-            border: 1px solid #f0f0f0;
-        }
-
-        .project-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
-        }
-
-        .project-image {
-            height: 200px;
-            background: linear-gradient(135deg, #fca311, #5e60ce);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .project-info {
-            padding: 2rem;
-        }
-
-        .project-title {
-            color: #0b0c2a;
-            font-size: 1.3rem;
-            margin-bottom: 1rem;
-        }
-
-        .project-description {
-            color: #666;
-            margin-bottom: 1.5rem;
-            font-size: 0.95rem;
-        }
-
-        .project-tags {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1.5rem;
-            flex-wrap: wrap;
-        }
-
-        .project-tag {
-            background: rgba(94, 96, 206, 0.1);
-            color: #5e60ce;
-            padding: 0.3rem 0.8rem;
-            border-radius: 15px;
-            font-size: 0.8rem;
-            font-weight: 500;
-        }
-
-        .project-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .project-link {
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: all 0.3s ease;
-            font-size: 0.9rem;
-        }
-
-        .project-link.primary {
-            background: #3b82f6;
-            color: white;
-        }
-
-        .project-link.secondary {
-            background: transparent;
-            color: #5e60ce;
-            border: 2px solid #5e60ce;
-        }
-
-        .project-link:hover {
-            transform: translateY(-2px);
-        }
-
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background: #0b0c2a;
-            color: white;
-        }
-
-        .contact-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-top: 3rem;
-        }
-
-        .contact-item {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 15px;
-            transition: all 0.3s ease;
-            border: 1px solid rgba(252, 163, 17, 0.2);
-        }
-
-        .contact-item:hover {
-            background: rgba(252, 163, 17, 0.1);
-            transform: translateY(-5px);
-        }
-
-        .contact-icon {
-            font-size: 2.5rem;
-            color: #fca311;
-            margin-bottom: 1rem;
-        }
-
-        .contact-item h3 {
-            color: #fca311;
-            margin-bottom: 0.5rem;
-        }
-
-        .contact-item a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .contact-item a:hover {
-            color: #fca311;
-        }
-
-        /* Footer */
-        footer {
-            background: #0b0c2a;
-            color: white;
-            text-align: center;
-            padding: 2rem 0;
-            border-top: 1px solid rgba(252, 163, 17, 0.2);
-        }
-
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .contact-info {
-                display: none;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-subtitle {
-                font-size: 1.4rem;
-            }
-
-            .hero-stats {
-                gap: 1.5rem;
-            }
-
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-            }
-
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-filters {
-                gap: 0.5rem;
-            }
-
-            .filter-btn {
-                padding: 0.6rem 1.5rem;
-                font-size: 0.9rem;
-            }
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .fade-in-up {
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        /* Smooth scrolling */
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
 </head>
+
 <body>
     <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Himanshu Patil</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-            <div class="contact-info">
-                <span><i class="fas fa-envelope"></i> patilhimanshu46875@gmail.com</span>
-                <span><i class="fas fa-phone"></i> +918788209773</span>
+            <a href="#home" class="logo">Himanshu Patil</a>
+
+            <div class="nav-center" id="navCenter">
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li class="dropdown">
+                        <a href="#" onclick="toggleDropdown(event)">
+                            <span>More</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="./projects/experiences.html">Experience</a>
+                             <a href="#certifications">Certifications</a>
+                           
+                           
+                        </div>
+                    </li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+
+
             </div>
+
+
         </nav>
     </header>
 
@@ -617,8 +49,9 @@
         <div class="hero-content">
             <h1>Himanshu Patil</h1>
             <div class="hero-subtitle">Full-Stack Developer</div>
-            <p>I turn coffee into code and ideas into beautiful, functional websites — blending creativity with logic to craft full-stack solutions that are fast, responsive, and user-friendly.</p>
-            
+            <p>I turn coffee into code and ideas into beautiful, functional websites — blending creativity with logic to
+                craft full-stack solutions that are fast, responsive, and user-friendly.</p>
+
             <div class="hero-stats">
                 <div class="stat">
                     <span class="stat-number">1+</span>
@@ -651,7 +84,8 @@
                     <div class="profile-card">
                         <div class="profile-inner">
                             <div class="profile-avatar">
-                                <i class="fas fa-user"></i>
+                                <img src="./assets/img/himpat (2)(1)2.png" alt="Himanshu Patil"
+                                    style="width: 100%; height: 100%; border-radius: 50%; object-fit: cover;">
                             </div>
                             <h3>Himanshu Patil</h3>
                             <p>Full-Stack Developer</p>
@@ -659,9 +93,13 @@
                     </div>
                 </div>
                 <div class="about-text">
-                    <p>Hi, I'm Himanshu Patil! I'm a dedicated Full-Stack Developer who enjoys turning ideas into reality through code. From designing responsive front-end interfaces to building robust back-end systems, I love every aspect of web development.</p>
-                    
-                    <p>With a strong foundation in modern web technologies, I specialize in creating intuitive user experiences and architecting scalable applications. I thrive on solving complex problems and continuously learning new technologies to enhance my skill set.</p>
+                    <p>Hi, I'm Himanshu Patil! I'm a dedicated Full-Stack Developer who enjoys turning ideas into
+                        reality through code. From designing responsive front-end interfaces to building robust back-end
+                        systems, I love every aspect of web development.</p>
+
+                    <p>With a strong foundation in modern web technologies, I specialize in creating intuitive user
+                        experiences and architecting scalable applications. I thrive on solving complex problems and
+                        continuously learning new technologies to enhance my skill set.</p>
 
                     <div class="skills-grid">
                         <div class="skill-item">
@@ -739,13 +177,18 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">My Projects</h2>
-            
+
             <div class="project-filters">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="html">HTML</button>
+                <button class="filter-btn" data-filter="html">HTML / CSS</button>
                 <button class="filter-btn" data-filter="javascript">JavaScript</button>
                 <button class="filter-btn" data-filter="live">Live Projects</button>
+                <button class="filter-btn" data-filter="design">Design Projects</button>
+
             </div>
+
+
+            <!-- live project -->
 
             <div class="projects-grid">
                 <div class="project-card" data-category="live">
@@ -754,11 +197,13 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Jogekar Dental Clinic</h3>
-                        <p class="project-description">Professional dental clinic website with appointment booking system and service information.</p>
+                        <p class="project-description">Professional dental clinic website with appointment booking
+                            system and service information.</p>
                         <div class="project-tags">
                             <span class="project-tag">HTML</span>
                             <span class="project-tag">CSS</span>
                             <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Bootstrap</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link primary">View Project</a>
@@ -773,11 +218,13 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Anvay Kidz World</h3>
-                        <p class="project-description">Interactive kids website with educational content and engaging activities.</p>
+                        <p class="project-description">Interactive kids website with educational content and engaging
+                            activities.</p>
                         <div class="project-tags">
                             <span class="project-tag">HTML</span>
                             <span class="project-tag">CSS</span>
                             <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">Bootstrap</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link primary">View Project</a>
@@ -792,7 +239,30 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">StyleShop</h3>
-                        <p class="project-description">Responsive e-commerce website for online home decor shopping with modern design.</p>
+                        <p class="project-description">Responsive e-commerce website for online home decor shopping with
+                            modern design.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                            
+
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="live">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Rupal Cafe</h3>
+                        <p class="project-description">Responsive cafe website with menu display, online ordering, and
+                            </p>
                         <div class="project-tags">
                             <span class="project-tag">HTML</span>
                             <span class="project-tag">CSS</span>
@@ -805,20 +275,110 @@
                     </div>
                 </div>
 
+
+                <div class="project-card" data-category="live">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">udit-muni-naam-saheb</h3>
+                        <p class="project-description">Responsive  website with event display, online donations, and      
+                            information.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://himanshufullstackdeveloper.github.io/udit-muni-naam-saheb/" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+                <div class="project-card" data-category="live">
+                    <div class="project-image">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Temple</h3>
+                        <p class="project-description">Responsive temple website with event display, online donations, and      
+                            information.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                            <span class="project-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://himanshufullstackdeveloper.github.io/kabir_kuti_rohana/" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- javascript project -->
                 <div class="project-card" data-category="javascript">
                     <div class="project-image">
                         <i class="fas fa-calculator"></i>
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Calculator</h3>
-                        <p class="project-description">Interactive calculator with basic arithmetic operations and clean interface.</p>
+                        <p class="project-description">Interactive calculator with basic arithmetic operations and clean
+                            interface.</p>
                         <div class="project-tags">
                             <span class="project-tag">JavaScript</span>
                             <span class="project-tag">Functions</span>
                             <span class="project-tag">Math</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link primary">View Project</a>
+                            <a href="./projects/calulator.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Even/Odd</h3>
+                        <p class="project-description">Even numbers are divisible by 2. Odd numbers are not divisible by
+                            2.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/evenorodd.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Vowel</h3>
+                        <p class="project-description">Identify and count vowels in a given text input.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/vowel.html" class="project-link primary">View Project</a>
                             <a href="#" class="project-link secondary">View Code</a>
                         </div>
                     </div>
@@ -830,14 +390,173 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">KBC Game</h3>
-                        <p class="project-description">Interactive quiz game inspired by KBC with multiple choice questions and scoring.</p>
+                        <p class="project-description">Interactive quiz game inspired by KBC with multiple choice
+                            questions and scoring.</p>
                         <div class="project-tags">
                             <span class="project-tag">JavaScript</span>
                             <span class="project-tag">Quiz</span>
                             <span class="project-tag">Game</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link primary">View Project</a>
+                            <a href="./projects/kbcnew.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Ticket Booking</h3>
+                        <p class="project-description">A web-based application for booking movie tickets online.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/ticket.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Weeks</h3>
+                        <p class="project-description"></p>There are 7 days in a week. A weekend is usually Saturday and
+                        Sunday (holiday/fun time 🎉). A weekday is from Monday to Friday (work/school days 📚💼).</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/weeks.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Electric Bill</h3>
+                        <p class="project-description"></p>Calculate and display the electric bill based on user input.
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/electricbill.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Age Calculator</h3>
+                        <p class="project-description"></p>Calculate and display the age based on user input.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/ages.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="javascript">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Match Game</h3>
+                        <p class="project-description"></p>Calculate and display the match game based on user input.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">JavaScript</span>
+                            <span class="project-tag">HTML</span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/match.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- HTML CSS project -->
+
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Sant Kabir</h3>
+                        <p class="project-description">Sant Kabir Das His writings influenced Hinduism's Bhakti movement
+                        </p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/kabir saheb.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Dr. APJ Abdul Kalam</h3>
+                        <p class="project-description">Dr. APJ Abdul Kalam was an Indian aerospace scientist and the
+                            11th President of India.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/ajabualkalam.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">KGF</h3>
+                        <p class="project-description">KGF is a 2018 Indian Kannada-language period action film written
+                            and directed by Prashanth Neel.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML</span>
+
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/kgfmovies.html" class="project-link primary">View Project</a>
                             <a href="#" class="project-link secondary">View Code</a>
                         </div>
                     </div>
@@ -849,18 +568,101 @@
                     </div>
                     <div class="project-info">
                         <h3 class="project-title">Indian Flag</h3>
-                        <p class="project-description">Animated Indian flag created with pure CSS featuring the tricolor design.</p>
+                        <p class="project-description">The Indian National Flag is a horizontal tricolor of saffron,
+                            white, and green with a blue Ashoka Chakra in the center.</p>
                         <div class="project-tags">
+                            <span class="project-tag">HTML</span>
                             <span class="project-tag">CSS</span>
-                            <span class="project-tag">Design</span>
-                            <span class="project-tag">Animation</span>
+
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link primary">View Project</a>
+                            <a href="./projects/flag.html" class="project-link primary">View Project</a>
                             <a href="#" class="project-link secondary">View Code</a>
                         </div>
                     </div>
                 </div>
+
+
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Freedom Fighter</h3>
+                        <p class="project-description">Freedom fighters are individuals who actively work to end
+                            oppression
+                            and achieve political or social change, often at great personal risk.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML </span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/freedomfighter.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="html">
+                    <div class="project-image">
+                        <i class="fas fa-flag"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">FrOM</h3>
+                        <p class="project-description">A form is a structured document designed to collect specific
+                            information from individuals in a logical and organized manner.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">HTML </span>
+                            <span class="project-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="./projects/form.html" class="project-link primary">View Project</a>
+                            <a href="#" class="project-link secondary">View Code</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Anvay Kidz World Design</h3>
+                        <p class="project-description">Anvay Kidz World shop web site Designe in figma</p>
+                        <div class="project-tags">
+                            <span class="project-tag">figma</span>
+                            <span class="project-tag">design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.figma.com/design/UXaFBgOnM6CRDQFGlJgJ9q/Untitled?node-id=0-1&t=4ffduiZHOqRPhlyr-1"
+                                class="project-link primary">View Design</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card" data-category="design">
+                    <div class="project-image">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <div class="project-info">
+                        <h3 class="project-title">Yogekar Dental Clinic Design</h3>
+                        <p class="project-description">Yogekar Dental Clinic website design in Figma</p>
+                        <div class="project-tags">
+                            <span class="project-tag">figma</span>
+                            <span class="project-tag">design</span>
+                            
+                        </div>
+                        <div class="project-links">
+                            <a href="https://www.figma.com/design/OIpA5spnBx3EfTlwc6Clml/Untitled?node-id=0-1&p=f&t=NZemKGgcf73nIqUc-0"
+                                class="project-link primary">View Design</a>
+
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -869,8 +671,9 @@
     <section id="contact" class="contact">
         <div class="container">
             <h2 class="section-title" style="color: white;">Contact Me</h2>
-            <p style="text-align: center; margin-bottom: 2rem; opacity: 0.9;">Let's connect and build something amazing together!</p>
-            
+            <p style="text-align: center; margin-bottom: 2rem; opacity: 0.9;">Let's connect and build something amazing
+                together!</p>
+
             <div class="contact-grid">
                 <div class="contact-item">
                     <div class="contact-icon">
@@ -925,228 +728,8 @@
         </div>
     </footer>
 
-    <script>
-        // Project Filter Functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const projectCards = document.querySelectorAll('.project-card');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                btn.classList.add('active');
-
-                const filter = btn.getAttribute('data-filter');
-                
-                projectCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                        card.style.animation = 'fadeInUp 0.6s ease forwards';
-                    } else {
-                        const category = card.getAttribute('data-category');
-                        if (category === filter) {
-                            card.style.display = 'block';
-                            card.style.animation = 'fadeInUp 0.6s ease forwards';
-                        } else {
-                            card.style.display = 'none';
-                        }
-                    }
-                });
-            });
-        });
-
-        // Smooth scroll for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        // Add fade-in animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('fade-in-up');
-                }
-            });
-        }, observerOptions);
-
-        // Observe all sections
-        document.querySelectorAll('section').forEach(section => {
-            observer.observe(section);
-        });
-
-        // Add loading animation to hero stats
-        function animateStats() {
-            const stats = document.querySelectorAll('.stat-number');
-            stats.forEach(stat => {
-                const target = parseInt(stat.textContent);
-                let current = 0;
-                const increment = target / 50;
-                const timer = setInterval(() => {
-                    current += increment;
-                    if (current >= target) {
-                        current = target;
-                        clearInterval(timer);
-                    }
-                    stat.textContent = Math.floor(current) + (stat.textContent.includes('+') ? '+' : '');
-                }, 40);
-            });
-        }
-
-        // Start stats animation when page loads
-        window.addEventListener('load', () => {
-            setTimeout(animateStats, 1000);
-        });
-
-        // Add hover effects to project cards
-        projectCards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-8px) scale(1.02)';
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0) scale(1)';
-            });
-        });
-
-        // Add typing effect to hero subtitle
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.textContent = '';
-            element.style.borderRight = '2px solid #fca311';
-            
-            function type() {
-                if (i < text.length) {
-                    element.textContent += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                } else {
-                    element.style.borderRight = 'none';
-                }
-            }
-            type();
-        }
-
-        // Start typing effect when page loads
-        window.addEventListener('load', () => {
-            const subtitle = document.querySelector('.hero-subtitle');
-            if (subtitle) {
-                setTimeout(() => {
-                    typeWriter(subtitle, 'Full-Stack Developer', 150);
-                }, 500);
-            }
-        });
-
-        // Add particles effect to hero background
-        function createParticles() {
-            const hero = document.querySelector('.hero');
-            const particlesCount = 20;
-            
-            for (let i = 0; i < particlesCount; i++) {
-                const particle = document.createElement('div');
-                particle.style.position = 'absolute';
-                particle.style.width = Math.random() * 4 + 2 + 'px';
-                particle.style.height = particle.style.width;
-                particle.style.background = `rgba(${Math.random() > 0.5 ? '252, 163, 17' : '94, 96, 206'}, 0.4)`;
-                particle.style.borderRadius = '50%';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.top = Math.random() * 100 + '%';
-                particle.style.animation = `float ${Math.random() * 3 + 2}s ease-in-out infinite alternate`;
-                hero.appendChild(particle);
-            }
-        }
-
-        // Add CSS for floating animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes float {
-                0% { transform: translateY(0px); opacity: 0.4; }
-                100% { transform: translateY(-20px); opacity: 0.8; }
-            }
-        `;
-        document.head.appendChild(style);
-
-        // Initialize particles
-        window.addEventListener('load', createParticles);
-
-        // Add mobile menu toggle
-        function createMobileMenu() {
-            const nav = document.querySelector('nav');
-            const navLinks = document.querySelector('.nav-links');
-            
-            // Create mobile menu button
-            const mobileMenuBtn = document.createElement('button');
-            mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
-            mobileMenuBtn.style.cssText = `
-                display: none;
-                background: none;
-                border: none;
-                color: white;
-                font-size: 1.5rem;
-                cursor: pointer;
-                padding: 0.5rem;
-            `;
-            
-            nav.appendChild(mobileMenuBtn);
-            
-            // Toggle mobile menu
-            mobileMenuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('mobile-active');
-            });
-            
-            // Add mobile styles
-            const mobileStyle = document.createElement('style');
-            mobileStyle.textContent = `
-                @media (max-width: 768px) {
-                    nav button {
-                        display: block !important;
-                    }
-                    
-                    .nav-links {
-                        position: absolute;
-                        top: 100%;
-                        left: 0;
-                        width: 100%;
-                        background: #0b0c2a;
-                        flex-direction: column;
-                        padding: 1rem 0;
-                        transform: translateY(-100%);
-                        opacity: 0;
-                        visibility: hidden;
-                        transition: all 0.3s ease;
-                        display: flex !important;
-                    }
-                    
-                    .nav-links.mobile-active {
-                        transform: translateY(0);
-                        opacity: 1;
-                        visibility: visible;
-                    }
-                    
-                    .nav-links li {
-                        margin: 0.5rem 0;
-                    }
-                }
-            `;
-            document.head.appendChild(mobileStyle);
-        }
-
-        // Initialize mobile menu
-        createMobileMenu();
-    </script>
+    <script src="./assets/index.js"></script>
 </body>
+
 </html>

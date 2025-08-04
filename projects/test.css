@@ -1,0 +1,26 @@
+/* style main */
+
+.main-div {
+    width: 100vw;
+    height: 100vh;
+    background-color: #12b034;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  /* style html */
+  .html-div {
+    background-color: #95136e;
+    width: 20%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 27px slategrey;
+  }
+  /* style  h2*/
+  h2 {
+    font-size: 72px;
+    color: rgb(15, 14, 14);
+    text-align: center;
+  }

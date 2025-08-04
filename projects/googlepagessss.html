@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enjoy Programming Search</title>
+    <!-- Google Fonts for consistent typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <!-- Material Icons for consistent iconography -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="googlepagesss.css">
+    <!-- Defer script loading to not block rendering -->
+    <script src="googlepagesss.js" defer></script>
+</head>
+<body>
+    <!-- Header with navigation -->
+    <header>
+        <nav>
+            <a href="#" class="nav-link">Gmail</a>
+            <a href="#" class="nav-link">Images</a>
+            <button class="apps-button" aria-label="Google apps">
+                <span class="material-icons">apps</span>
+            </button>
+            <button class="avatar-button" aria-label="User account">
+                <img src="./img/miclogo.png" alt="" class="avatar">
+            </button>
+        </nav>
+    </header>
+
+    <!-- Main content area -->
+    <main>
+        <!-- Logo -->
+        <img src="./img/enjoy.png" alt="Enjoy Programming Logo" class="logo">
+        
+        <!-- Search form -->
+        <form id="search-form" role="search">
+            <div class="search-bar">
+                <span class="material-icons search-icon">search</span>
+                <input type="text" id="search-input" name="q" autocomplete="off" autofocus placeholder="Search Enjoy Programming">
+                <button type="button" class="clear-button" aria-label="Clear search">
+                    <span class="material-icons">close</span>
+                </button>
+                <button type="button" class="voice-button" aria-label="Search by voice">
+                    <span class="material-icons">mic</span>
+                </button>
+            </div>
+            <div class="search-buttons">
+                <button type="submit" class="search-button">Search</button>
+                <button type="button" class="lucky-button">I'm Feeling Lucky</button>
+            </div>
+        </form>
+
+        <!-- Search results display area -->
+        <div id="search-results" aria-live="polite"></div>
+
+        <!-- Footer with language options -->
+        <footer>
+            <p>Google offered in: 
+                <a href="#" lang="hi">हिन्दी</a>
+                <a href="#" lang="bn">বাংলা</a>
+                <a href="#" lang="te">తెలుగు</a>
+                <a href="#" lang="mr">मराठी</a>
+                <a href="#" lang="ta">தமிழ்</a>
+                <a href="#" lang="gu">ગુજરાતી</a>
+                <a href="#" lang="kn">ಕನ್ನಡ</a>
+                <a href="#" lang="ml">മലയാളം</a>
+                <a href="#" lang="pa">ਪੰਜਾਬੀ</a>
+            </p>
+        </footer>
+    </main>
+</body>
+</html>

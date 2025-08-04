@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <link rel="stylesheet" href="../styles/index.css" />
+    <title>Responsive resume cv</title>
+  </head>
+  <body>
+    <!--========== HEADER ==========-->
+    <header class="l-header" id="header">
+      <nav class="nav bd-container">
+        <a href="#" class="nav nav__logo">Alex</a>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item">
+              <a href="#home" class="nav__link active-link">
+                <i class="bx bx-home nav__icon"></i>Home
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#profile" class="nav__link">
+                <i class="bx bx-user nav__icon"></i>Profile
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#education" class="nav__link">
+                <i class="bx bx-book nav__icon"></i>Education
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#skills" class="nav__link">
+                <i class="bx bx-receipt nav__icon"></i>Skills
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#experiencie" class="nav__link">
+                <i class="bx bx-briefcase nav__icon"></i>Experiencie
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#certificates" class="nav__link">
+                <i class="bx bx-briefcase nav__icon"></i>Certificates
+              </a>
+            </li>
+            <li class="nav__item">
+              <a href="#references" class="nav__link">
+                <i class="bx bx-link-external nav__icon"></i>References
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <i class="bx bx-grid-alt nav__icon"></i>
+        </div>
+      </nav>
+    </header>
+
+    <main class="l-main bd-container">
+      <!-- All elements within this div, is generated in PDF -->
+      <div class="resume" id="area-cv">
+        <div class="resume__left">
+          <!--========== HOME ==========-->
+          <section class="home" id="home">
+            <div class="home__container section bd-grid">
+              <div class="home__data bd-grid">
+                <img src="./img/himanshu (2).png " alt="perfil" class="home__img" />
+                <h1 class="home__title">Himanshu <b>Patil</b></h1>
+                <h3 class="home__profession">full stack developer</h3>
+  
+                <div>
+                  <a download="" href="assets/pdf/ResumeCv.pdf" class="home__button-movil">Download</a>
+                </div>
+                <div>
+                  <a href="contact.html" class="home__button-contact">Contact Me</a>
+                </div>
+              </div>
+              <div class="home__address bd-grid">
+                <span class="home__information">
+                  <i class="bx bx-map home__icon"></i> katol nagpur
+                  - India
+                </span>
+                <span class="home__information">
+                  <i class="bx bx-envelope home__icon"></i> patilhimanshu46875@email.com
+                </span>
+                <span class="home__information">
+                  <i class="bx bx-phone home__icon"></i> +918788209773
+                </span>
+              </div>
+            </div>
+            <!-- Theme change button -->
+            <i
+              class="bx bx-moon change-theme"
+              title="Theme"
+              id="theme-button"
+            ></i>
+            <!-- Button to generate and download the pdf. Available for desktop. -->
+            <i
+              class="bx bx-download generate-pdf"
+              title="Generate PDF"
+              id="resume-button"
+            ></i>
+          </section>
+
+          <!--========== SOCIAL ==========-->
+          <section class="social section">
+            <h2 class="section-title">SOCIAL</h2>
+            <div class="social__container bd-grid">
+              <a href="https://linkedin.com/" target="_blank" class="social__link">
+                <i class="bx bxl-linkedin-square social__icon"></i> @himanshupatil
+              </a>
+              <a href="https://www.facebook.com/" target="_blank" class="social__link">
+                <i class="bx bxl-facebook social__icon"></i> @himanshupatil
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" class="social__link">
+                <i class="bx bxl-instagram social__icon"></i> @himan_shu2715
+              </a>
+            </div>
+          </section>
+
+             <!--========== PROFILE ==========-->
+        <section class="profile section" id="profile">
+          <h2 class="section-title">Profile</h2>
+          <p class="profile__description">
+            I am a person, responsible with their work during working hours.
+            Finish various technical and higher studies at large universities.
+            I have six month of experiencie and achievements in the labor
+            field.
+          </p>
+        </section>
+
+        <!--========== EDUCATION ==========-->
+        <section class="education section" id="education">
+          <h2 class="section-title">Education</h2>
+          <div class="education__container">
+            <div class="education__content">
+              <div class="education__time">
+                <span class="education__rounder"></span>
+                <span class="education__line"></span>
+              </div>
+              <div class="education__data bd-grid">
+                <h3 class="education__title">10th </h3>
+                <span class="education__studies">tips katol</span>
+                <span class="education__year">2021-2023</span>
+              </div>
+            </div>
+
+            <div class="education__content">
+              <div class="education__time">
+                <span class="education__rounder"></span>
+                <span class="education__line"></span>
+              </div>
+              <div class="education__data bd-grid">
+                <h3 class="education__title">11th</h3>
+                <span class="education__studies">tips katol</span>
+                <span class="education__year">2023 - 2024</span>
+              </div>
+            </div>
+
+            <div class="education__content">
+              <div class="education__time">
+                <span class="education__rounder"></span>
+                <!-- <span class="education__line"></span> -->
+              </div>
+              <div class="education__data bd-grid">
+                <h3 class="education__title">12th</h3>
+                <span class="education__studies">concpect school katol</span>
+                <span class="education__year">2024 - 2025</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+ <!--========== SKILLS  ==========-->
+ <section class="skills section" id="skills">
+  <h2 class="section-title">Skills</h2>
+  <div class="skills__content bd-grid">
+    <ul class="skills__data">
+      <li class="skills__name">
+        <span class="skills__circle"></span>Html
+      </li>
+      <li class="skills__name">
+        <span class="skills__circle"></span>Css
+      </li>
+
+
+    </ul>
+    <ul class="skills__data">
+      <li class="skills__name">
+        <span class="skills__circle"></span>JavaScript
+      </li>
+      <li class="skills__name">
+        <span class="skills__circle"></span>React
+      </li>
+
+    </ul>
+  </div>
+</section>
+</div>
+
+<div class="resume__right">
+          <!--========== CONTACT ==========-->
+          <section class="contact section" id="contact">
+            <h2 class="section-title">Contact</h2>
+
+            <div class="contact__container bd-grid">
+              <div class="contact__info">
+                <div class="contact__content">
+                  <i class="bx bx-phone contact__icon"></i>
+                  <a href="tel:+918788209773" class="contact__phone"
+                    >+918788209773</a
+                  >
+                </div>
+                <div class="contact__content">
+                  <i class="bx bx-envelope contact__icon"></i>
+                  <a href="mailto:example@mail.com" class="contact__email"
+                    >patilhimanshu46875@email.com</a
+                  >
+                </div>
+              </div>
+              <form class="contact__form">
+                <div class="contact__inputs">
+                  <input
+                    type="text"
+                    placeholder="Name"
+                    class="contact__input"
+                    required
+                  />
+                  <input
+                    type="email"
+                    placeholder="Email"
+                    class="contact__input"
+                    required
+                  />
+                  <input
+                    type="tel"
+                    placeholder="Phone"
+                    class="contact__input"
+                  />
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    class="contact__input"
+                    required
+                  />
+                </div>
+                <textarea
+                  placeholder="Message"
+                  class="contact__textarea"
+                  required
+                ></textarea>
+                <a type="submit" class="contact__button" href="message.html">
+                  Send Message
+                </a>
+              </form>
+            </div>
+
+            <a href="./resumehim.html" class="back__home">
+              <i class="bx bx-arrow-back back__icon"></i>
+              Back to Home
+            </a>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!--========== SCROLL TOP ==========-->
+    <a href="#" class="scrolltop" id="scroll-top">
+      <i class="bx bx-up-arrow-alt scrolltop__icon"></i>
+    </a>
+    <!--========== HTML2PDF ==========-->
+    <script src="js/html2pdf.bundle.min.js"></script>
+
+    <!--========== MAIN JS ==========-->
+    <script src="../resumejs/main.js"></script>
+  </body>
+</html>

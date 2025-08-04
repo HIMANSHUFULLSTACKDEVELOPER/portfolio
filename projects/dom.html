@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Counter</title>
+    <link rel="stylesheet" href="dom.css">
+    <script src="dom.js"></script>
+</head>
+<body>
+    <div class="main-container">
+        <div class="left-container">
+            <h1 id="count">1</h1>
+            <div id="visual-counter"></div>
+            <button id="button-one" class="plus-button" onclick="add()" aria-label="Add box">
+                ADD box
+            </button>
+            <button class="minus-button" onclick="remove()" aria-label="Remove box">
+                REMOVE box
+            </button>
+            <button onclick="toggleTheme()" aria-label="Toggle color theme">Toggle Theme</button>
+        </div>
+        <div id="right-container" class="right-container_cl">
+            <div class="brick"></div>
+        </div>
+    </div>
+    <audio id="addSound" src="add.mp3"></audio>
+    <audio id="removeSound" src="remove.mp3"></audio>
+   
+</body>
+</html>

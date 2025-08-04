@@ -1,0 +1,107 @@
+   /* Styling for the boxes */
+   .box {
+    height: 60px;
+    width: 50vw;
+    border-style: solid;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto; /* Center the box horizontally */
+    border-radius: 10px; /* Add rounded corners */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Specific styles for each section */
+#section-one {
+    background-color: lightblue;
+}
+
+#section-one:hover {
+    background-color: #87ceeb; /* Change background color on hover */
+}
+
+#section-two {
+    background-color: lightcoral;
+}
+
+#section-three {
+    background-color: lightgreen;
+}
+
+/* Display area styling */
+.display {
+    width: 100vw;
+    height: 120px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: lightgray;
+    border-radius: 10px; /* Add rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    margin-top: 20px;
+}
+
+/* Anchor link styling */
+a {
+    font-size: 22px;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Input box styling */
+.input-box {
+    height: 80px;
+    width: 50vw;
+    border-style: solid;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px auto; /* Center the input box horizontally */
+    background-color: lightslategray;
+    border-radius: 10px; /* Add rounded corners */
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    height: 100%;
+    font-size: 22px;
+    border: none; /* Remove default input border */
+    outline: none; /* Remove default input focus outline */
+    background-color: transparent; /* Make input background transparent */
+    text-align: center; /* Center text in input */
+}
+
+/* Body styling */
+body {
+    background-color: aqua;
+    font-family: 'Arial', sans-serif; /* Set default font family */
+}
+
+/* Bulb image styling */
+#bulb {
+    height: 170px; /* Increase the height */
+    width: 170px; /* Increase the width */
+    border-radius: 50%; /* Make the bulb image circular */
+    transition: transform 0.3s ease; /* Add smooth transition effect */
+}
+
+/* Output text styling */
+#output {
+    font-size: 24px; /* Increase font size of output text */
+    margin-top: 10px; /* Add some space above output text */
+    transition: color 0.3s ease; /* Smooth color transition */
+}
+
+#output {
+    margin-top: 20px; /* Adjust as needed */
+    font-size: 44px; /* Increase font size */
+}

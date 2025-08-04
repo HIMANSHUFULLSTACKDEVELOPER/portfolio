@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+background-color: #e7a007;
+  background-size: cover;
+  background-attachment: fixed;
+  transition: background-color 0.3s ease;
+}
+
+.main-container {
+  display: flex;
+  height: 100vh;
+}
+
+.left-container {
+  width: 30%;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.right-container_cl {
+  width: 70%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow-y: auto;
+}
+
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.plus-button {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.minus-button {
+  background-color: #f44336;
+  color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.brick {
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  background-color: #795548;
+  transition: all 0.3s ease-in-out;
+}
+
+.brick:hover {
+  transform: rotate(5deg);
+}
+
+#count {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+#visual-counter {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.dark-theme {
+  background-color: #333;
+  color: #fff;
+}
+
+.dark-theme .left-container {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.dark-theme .brick {
+  background-color: #4e342e;
+}
+
+@media screen and (max-width: 768px) {
+  .main-container {
+      flex-direction: column;
+  }
+  .left-container, .right-container_cl {
+      width: 100%;
+  }
+}

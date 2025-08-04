@@ -1,0 +1,60 @@
+/* style  main*/
+.main {
+    background-color: #CCD3CA;
+    height: 500px;
+    width: 400px;
+}
+/* top */
+.top {
+    background-color: #FFBE98;
+    height: 30%;
+    width: 100%;
+}
+
+/* style */button
+button {
+    text-align: center;
+    font-size: 22px;
+    color: black;
+    background-color: bisque;
+
+}
+/* style  style*/ 
+.style {
+    background-image: url(https://d1csarkz8obe9u.cloudfront.net/posterpreviews/powerpoint-math-for-kids-background-design-template-9c7101e6f62f51589b70148f650f4f6e_screen.jpg?ts=1701318011);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+/* style  st*/
+.st {
+    padding-left: 455px;
+
+}
+/* style ben on*/ 
+.ben {
+    font-size: 43px;
+    background-color: azure;
+    text-align: center;
+    border-radius: 42vh;
+}
+/* style  sty*/
+.styl {
+
+    text-align: center;
+}
+/* media */
+@media only screen and (max-width: 1200px) {
+
+    .main {
+        background-color: #CCD3CA;
+        height: 800px;
+        width: 500px;
+        text-align: center;
+        margin-left: -200px;
+        
+    }
+
+
+}

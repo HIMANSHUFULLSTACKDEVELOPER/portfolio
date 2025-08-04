@@ -1,0 +1,141 @@
+     /* Main container styling */
+     .main-container {
+        width: 55vw;
+        height: 70vh;
+        margin: 50px auto;
+        border-radius: 30px;
+        background-color: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    /* Top display box styling */
+    #greeting {
+        width: 90%;
+        height: 20%;
+        border-radius: 15px;
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+        color: white;
+        background-color: rgb(70, 130, 180);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    /* Bottom input box styling */
+    .bottom-container {
+        width: 90%;
+        height: 60%;
+        background-color: rgba(222, 215, 135, 0.733);
+        border-radius: 15px;
+        margin: 10px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Background styling for the body */
+    body {
+        width: 100vw;
+        height: 100vh;
+        background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Button styling */
+    .button {
+        width: 60%;
+        height: 10%;
+        background-color: palegreen;
+        border-radius: 10px;
+        border: none;
+        margin-top: 15px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    /* Button hover effect */
+    .button:hover {
+        background-color: #21669f;
+        color: white;
+    }
+
+    /* Input field container styling */
+    .container {
+        width: 70%;
+        height: 15%;
+        font-size: 1.2rem;
+        background-color: #ffb300;
+        border: none;
+        border-radius: 10px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* Heading styling */
+    h1 {
+        font-size: 2.5rem;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: black;
+        text-align: center;
+        background-color: aquamarine;
+        padding: 10px;
+        border-radius: 15px;
+        box-shadow: 0 0 10px rgba(178, 108, 108, 0.7);
+    }
+
+    /* Media query for screens smaller than 768px (tablets and smaller) */
+    @media only screen and (max-width: 768px) {
+        .main-container {
+            width: 90vw;
+            height: auto;
+            margin: 20px;
+            padding: 20px;
+        }
+
+        #greeting {
+            font-size: 1.5rem;
+            height: auto;
+            padding: 10px;
+        }
+
+        .bottom-container {
+            height: auto;
+            padding: 20px;
+        }
+
+        .button {
+            width: 80%;
+            height: auto;
+            padding: 10px;
+            font-size: 1rem;
+        }
+
+        .container {
+            width: 80%;
+            font-size: 1rem;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 2rem;
+ 
+        }
+    }

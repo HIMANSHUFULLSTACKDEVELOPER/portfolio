@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Greeting Calculator</title>
+<link rel="stylesheet" href="./time.css">
+<script src="time.js"></script>
+  
+</head>
+
+<body>
+    <!-- Heading -->
+    <h1>Time:</h1>
+    <!-- Main container -->
+    <div class="main-container">
+        <!-- Greeting display section -->
+        <div id="greeting"></div>
+        <!-- Bottom section for input and button -->
+        <div class="bottom-container">
+            <!-- Input field for time -->
+            <input id="numberInput" type="number" class="container" placeholder="Enter time (1-24)" min="1" max="24">
+            <!-- Submit button to display greeting -->
+            <button class="button" onclick="displayGreeting()">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>

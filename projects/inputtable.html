@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Input Demo</title>
+    <link rel="stylesheet" href="./inputtable.css">
+    <script src="./inputtable.js"></script>
+</head>
+
+<body>
+    <!-- Page title -->
+    <h1>Interactive Input Demo</h1>
+    <!-- Main container -->
+    <div class="main-container">
+        <!-- Display area for showing results -->
+        <div class="display" id="display">Results will appear here</div>
+        <!-- Container for input elements -->
+        <div class="input-container">
+            <!-- Input field for user text -->
+            <input id="input" type="text" class="input-box" placeholder="Enter your text here" aria-label="Text input" />
+            <!-- Button to trigger prompt input -->
+            <button class="button" onclick="promptInput()" aria-label="Prompt Input" title="Opens a dialog box for input">Prompt Input</button>
+            <!-- Button to get input from the text box -->
+            <button class="button" onclick="getHtmlInput()" aria-label="Get HTML Input" title="Gets input from the text box">Get HTML Input</button>
+            <!-- Button to assign a predefined value -->
+            <button class="button" onclick="assignValue()" aria-label="Assign Value" title="Assigns a predefined value">Assign Value</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

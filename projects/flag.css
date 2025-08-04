@@ -1,0 +1,89 @@
+/* Set default styles for the entire page */
+body {
+    font-family: Arial, sans-serif;
+    background: url(./images_videos/him.jpg) no-repeat center/cover;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Style for the main title */
+.indi {
+    text-align: center;
+    font-size: 40px;
+    color: #000;
+    animation: titleAnimation 5s forwards;
+}
+
+/* Animation for the title */
+@keyframes titleAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Container for the flag */
+.flag-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Style for the flag */
+.flag {
+    width: 300px;
+    border: 1px solid #000;
+}
+
+/* Style for each stripe of the flag */
+.stripe {
+    height: 100px;
+}
+
+/* Colors for each stripe */
+.orange {
+    background-color: #FF9933;
+}
+
+.white {
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.green {
+    background-color: #138808;
+}
+
+/* Style for the Ashoka Chakra */
+.chakra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+}
+
+/* Style for the national anthem section */
+.anthem {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+}
+
+/* Style for the links section */
+.links {
+    margin: 20px 0;
+}
+
+/* Style for the embedded iframe */
+iframe {
+    border: none;
+    margin-top: 20px;
+}
