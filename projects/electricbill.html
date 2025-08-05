@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Ensures proper rendering and touch zooming for all devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electric Bill Calculator</title>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="electricbill.css">
+      <!-- Link to external JavaScript file -->
+      <script src="electricbill.js"></script>
+    <!-- Google Fonts for improved typography -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Main container for the application -->
+    <div class="container">
+        <header>
+            <h1>Electric Bill Calculator</h1>
+        </header>
+        <main>
+            <!-- Form for user input -->
+            <div class="input-group">
+                <label for="units">Enter Units Consumed:</label>
+                <input type="number" id="units" placeholder="e.g., 100" min="0">
+            </div>
+            <!-- Button to trigger calculation -->
+            <button id="calculateBtn">Calculate Bill</button>
+            <!-- Result display area -->
+            <div id="result" class="hidden"></div>
+        </main>
+    </div>
+  
+</body>
+</html>

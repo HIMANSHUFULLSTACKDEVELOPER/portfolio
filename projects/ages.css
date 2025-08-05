@@ -1,0 +1,121 @@
+    /* Global styles to reset margin, padding and set box-sizing */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Style for the body */
+    body {
+        font-family: 'Arial', sans-serif;
+        background-image: url(https://img.freepik.com/free-vector/hand-painted-watercolor-pastel-sky-background_23-2148902771.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding: 20px;
+    }
+
+    /* Header (h1) styles */
+    h1 {
+        font-size: 2.5rem;
+        color: #333;
+        background-color: rgba(127, 255, 212, 0.8);
+        padding: 15px 30px;
+        border-radius: 20px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        margin-bottom: 30px;
+        text-align: center;
+        backdrop-filter: blur(5px);
+    }
+
+    /* Main container styles */
+    .main-container {
+        width: 90%;
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.8);
+        border-radius: 20px;
+        padding: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Display styles */
+    #display {
+        width: 100%;
+        padding: 20px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        font-size: 1.5rem;
+        color: #fff;
+        background-color: #4a4a4a;
+        text-align: center;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Input styles */
+    #numberInput {
+        width: 100%;
+        padding: 10px;
+        font-size: 1.2rem;
+        border: 2px solid #ddd;
+        border-radius: 10px;
+        margin-bottom: 20px;
+        transition: border-color 0.3s ease;
+    }
+
+    #numberInput:focus {
+        border-color: #4CAF50;
+        outline: none;
+    }
+
+    /* Button styles */
+    .button {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .button:hover {
+        background-color: #45a049;
+        transform: scale(1.02);
+    }
+
+    .button:active {
+        background-color: #3e8e41;
+    }
+
+    /* Media queries for responsiveness */
+    @media screen and (max-width: 600px) {
+        h1 {
+            font-size: 2rem;
+            padding: 10px 20px;
+        }
+
+        .main-container {
+            width: 95%;
+        }
+
+        #display {
+            font-size: 1.2rem;
+        }
+
+        #numberInput, .button {
+            font-size: 1rem;
+        }
+    }

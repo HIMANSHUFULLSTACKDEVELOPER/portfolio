@@ -1,0 +1,117 @@
+/* Reset default styles and use border-box for easier sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic body styling and centering content */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main container styling */
+.container {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Header styling */
+header {
+    margin-bottom: 2rem;
+}
+
+h1 {
+    color: #333;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+/* Form layout */
+.input-group {
+    margin-bottom: 1rem;
+}
+
+/* Label styling */
+label {
+    display: block;
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    text-align: left;
+}
+
+/* Input field styling */
+input {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+/* Button styling */
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Result display styling */
+#result {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 5px;
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none;
+}
+
+/* Media query for responsive design on smaller screens */
+@media (max-width: 480px) {
+    .container {
+        width: 95%;
+        padding: 1.5rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    input, button {
+        font-size: 0.9rem;
+    }
+}

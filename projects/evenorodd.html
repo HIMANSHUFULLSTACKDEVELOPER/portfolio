@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Operations</title>
+    <link rel="stylesheet" href="./evenorodd.css">
+      <!-- JavaScript file link -->
+      <script src="evenorodd.js"></script>
+</head>
+<body>
+    <!-- Main container for the application -->
+    <div class="container">
+        <h1>Number Operations</h1>
+        
+        <!-- Input section for user to enter numbers -->
+        <div class="input-section">
+            <input type="number" id="input-one" placeholder="Enter first number" aria-label="First number">
+            <input type="number" id="input-two" placeholder="Enter second number" aria-label="Second number">
+        </div>
+        
+        <!-- Button section for different operations -->
+        <div class="button-section">
+            <button onclick="evenOrOdd()">Even or Odd</button>
+            <button onclick="isEligible()">Voting Eligibility</button>
+            <button onclick="isEqualTo()">Compare Numbers</button>
+            <button onclick="interchange()">Swap Numbers</button>
+        </div>
+        
+        <!-- Result display section -->
+        <div class="result" id="result">
+            Result will appear here
+        </div>
+    </div>
+    
+  
+</body>
+</html>
