@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -212,6 +213,7 @@
             0% {
                 transform: translateX(-100%) translateY(-100%) rotate(45deg);
             }
+
             100% {
                 transform: translateX(100%) translateY(100%) rotate(45deg);
             }
@@ -366,6 +368,7 @@
                 opacity: 0;
                 transform: translateY(30px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -409,6 +412,7 @@
                 opacity: 0;
                 transform: translateY(-50px);
             }
+
             to {
                 opacity: 1;
                 transform: translateY(0);
@@ -448,10 +452,29 @@
             color: #666;
             margin-bottom: 0.5rem;
         }
+
+
+
+        .certificate-img {
+  width: 322px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Query for small screens */
+@media (max-width: 768px) {
+  .certificate-img {
+    width: 90%; /* Make it responsive */
+  }
+}
+
     </style>
 </head>
+
 <body>
-   <!-- Header -->
+    <!-- Header -->
     <header>
         <nav>
             <a href="#home" class="logo">Himanshu Patil</a>
@@ -477,7 +500,7 @@
         <div class="container">
             <h1 class="section-title fade-in-up">My Achievements</h1>
             <p class="section-subtitle fade-in-up">Certifications and milestones in my professional journey</p>
-            
+
             <div class="achievements-container">
                 <!-- Statistics Section -->
                 <div class="stats-section fade-in-up">
@@ -514,7 +537,9 @@
                         <h3 class="achievement-title">Level 1 Certification</h3>
                         <p class="achievement-subtitle">Professional Development</p>
                         <p class="achievement-description">
-                            Successfully completed Level 1 certification, demonstrating foundational knowledge and skills in the field. This certification marks the beginning of my professional certification journey.
+                            Successfully completed Level 1 certification, demonstrating foundational knowledge and
+                            skills in the field. This certification marks the beginning of my professional certification
+                            journey.
                         </p>
                         <span class="achievement-badge">
                             <i class="fas fa-certificate"></i>
@@ -530,7 +555,8 @@
                         <h3 class="achievement-title">Level 2 Certification</h3>
                         <p class="achievement-subtitle">Advanced Skills</p>
                         <p class="achievement-description">
-                            Next milestone in professional development. Currently working towards this advanced certification to enhance skills and expertise.
+                            Next milestone in professional development. Currently working towards this advanced
+                            certification to enhance skills and expertise.
                         </p>
                         <span class="achievement-badge" style="background: linear-gradient(135deg, #6c757d, #495057);">
                             <i class="fas fa-clock"></i>
@@ -548,11 +574,13 @@
             <span class="close">&times;</span>
             <div class="certificate-preview">
                 <h3>🏆 Level 1 Certification</h3>
-              <img width="322px" src="../assets/img/EP2024010.jpg" alt="">
+               <img class="certificate-img" src="../assets/img/certificate.jpg" alt="Certificate">
+
 
                 <p style="margin-top: 1.5rem; font-style: italic; color: #fca311;">
-                    "This certification validates the completion of Level 1 requirements and demonstrates commitment to professional growth."
-                </p> 
+                    "This certification validates the completion of Level 1 requirements and demonstrates commitment to
+                    professional growth."
+                </p>
             </div>
         </div>
     </div>
@@ -601,18 +629,18 @@
         function animateStats() {
             const stats = document.querySelectorAll('.stat-number');
             stats.forEach(stat => {
-                const target = stat.textContent.includes('%') ? 
-                    parseInt(stat.textContent) : 
-                    stat.textContent.includes('+') ? 
-                    parseInt(stat.textContent) : 
-                    parseInt(stat.textContent);
-                
+                const target = stat.textContent.includes('%') ?
+                    parseInt(stat.textContent) :
+                    stat.textContent.includes('+') ?
+                        parseInt(stat.textContent) :
+                        parseInt(stat.textContent);
+
                 if (isNaN(target)) return;
-                
+
                 let current = 0;
                 const increment = target / 50;
-                const suffix = stat.textContent.includes('+') ? '+' : 
-                             stat.textContent.includes('%') ? '%' : '';
+                const suffix = stat.textContent.includes('+') ? '+' :
+                    stat.textContent.includes('%') ? '%' : '';
 
                 const timer = setInterval(() => {
                     current += increment;
@@ -706,4 +734,5 @@
         createMobileMenu();
     </script>
 </body>
+
 </html>
